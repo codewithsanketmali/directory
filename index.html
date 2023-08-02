@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="nav-image">
+        <nav class="navbar navbar-expand-lg navbar-light  my-5 mt-5">
+            <div class="container-fluid">
+                <a class="navbar-brand ms-5" href="#">DIRECTORYADS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto ms-5 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active fw-bold ms-5" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-5 fw-bold" href="#">Ads</a>
+                        </li>
+                        <li class="nav-item dropdown ms-5">
+                            <a class="nav-link dropdown-toggle fw-bold" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                About
+                            </a>
+                        <li class="nav-item">
+                            <a class="nav-link ms-5 fw-bold" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ms-5 fw-bold" href="#">ontact</a>
+                        </li>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-5">
+                        <button class="btn btn-outline-primary" type="submit">Log in</button>
+
+                        <button class="btn btn-outline-success bg-success mx-3" type="submit">Register</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- hero -->
+        <div class="d-flex flex-column justify-content-center mid ">
+            <h1 class="text-center fs-1">Welcome To DirectoryAds</h1>
+            <p class="text-center text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <!-- The form -->
+            <form class="example mx-5" action="action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+            <!-- Add font awesome icons to buttons  -->
+            <div class="ms-5">
+                <p>Lorem ipsum dolor sit amet.</p>
+                <button class="btn"><i class="fa fa-home"></i></button>
+                <button class="btn"><i class="fa fa-bars"></i></button>
+                <button class="btn"><i class="fa fa-trash"></i></button>
+                <button class="btn"><i class="fa fa-close"></i></button>
+                <button class="btn"><i class="fa fa-folder"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Ads -->
+    <div id="ads" class="container">
+        <div class="container">
+            <div class="card-1 card-div">
+                <div class="like-icon-div">
+                    <label for="card-1-like" class="like-icon-div-child">
+                        <input type="checkbox" id="card-1-like">
+                        <i class="far fa-heart heart-empty"></i>
+                        <i class="fas fa-heart heart-fill"></i>
+                    </label>
+                </div>
+
+                <div class="gow-img-div img-div">
+                    <img src="./tools-gf2918ede0_640.jpg" alt="god-of-war-figurine">
+                </div>
+                <div class="text-container">
+                    <h2 class="item-name">Kratos and Artreus Statue - God Of War</h2>
+                    <p class="date"> Departure date: 31/03/2021 </p>
+                    <div class="pricing-and-cart">
+                        <div class="pricing">
+                            <p class="previous-price">$999</p>
+                            <p class="current-price">$599</p>
+                        </div>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-2 card-div">
+                <div class="like-icon-div">
+                    <label for="card-2-like" class="like-icon-div-child">
+                        <input type="checkbox" id="card-2-like">
+                        <i class="far fa-heart heart-empty"></i>
+                        <i class="fas fa-heart heart-fill"></i>
+                    </label>
+                </div>
+                <div class="sekiro-img-div img-div">
+                    <img src="./olive-oil-ged09ac310_1280.jpg" alt="">
+                </div>
+                <div class="text-container">
+                    <h2 class="item-name">Sekiro Statue - Sekiro: Shadows Die Twice</h2>
+                    <p class="date"> Departure date: 31/03/2021 </p>
+                    <div class="pricing-and-cart">
+                        <div class="pricing">
+                            <p class="previous-price">$50</p>
+                            <p class="current-price">$799</p>
+                        </div>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-3 card-div">
+                <div class="like-icon-div">
+                    <label for="card-3-like" class="like-icon-div-child">
+                        <input type="checkbox" id="card-3-like">
+                        <i class="far fa-heart heart-empty"></i>
+                        <i class="fas fa-heart heart-fill"></i>
+                    </label>
+                </div>
+                <div class="dazai-img-div img-div">
+                    <img src="./architecture-g2d41edad9_1280.jpg" alt="sekiro-figurine">
+                </div>
+                <div class="text-container">
+                    <h2 class="item-name">Osamu Dazai Funko Pop - Bungou Stray Dogs</h2>
+                    <p class="date"> Departure date: 31/03/2021 </p>
+                    <div class="pricing-and-cart">
+                        <div class="pricing">
+                            <p class="previous-price">$449</p>
+                            <p class="current-price">$279</p>
+                        </div>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-4 card-div">
+                <div class="like-icon-div">
+                    <label for="card-4-like" class="like-icon-div-child">
+                        <input type="checkbox" id="card-4-like">
+                        <i class="far fa-heart heart-empty"></i>
+                        <i class="fas fa-heart heart-fill"></i>
+                    </label>
+                </div>
+                <div class="u4-img-div img-div">
+                    <img src="./under-construction-ge2ef80df4_640.jpg" alt="u4-figurine">
+                </div>
+                <div class="text-container">
+                    <h2 class="item-name">Nathan Drake Statue - Uncharted 4: A Thief's End</h2>
+                    <p class="date"> Departure date: 31/03/2021 </p>
+                    <div class="pricing-and-cart">
+                        <div class="pricing">
+                            <p class="previous-price">$759</p>
+                            <p class="current-price">$499</p>
+                        </div>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+      <div class="text-center my-5 mt-5">
+        <h1>Popular Categories</h1>
+        <p>
+            Lorem ipsum dolor sit amet.
+        </p>
+        <h1 class="text-primary">__________</h1>
+      </div>
+    <div class="d-flex justify-content-evenly btn-car">
+        <button class="btn"><i class="fa fa-home"></i> Home</button>
+        <button class="btn"><i class="fa fa-car"></i> car</button>
+        <button class="btn"><i class="fa fa-chair"></i> Furniture</button>
+        <button class="btn"><i class="fa fa-book-open"></i> Close</button>
+        <button class="btn"><i class="fa fa-folder"></i> Folder</button>
+    </div>
+
+    <!-- blog -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4>Latest News</h4>
+                <ul class="timeline">
+                    <li>
+                        <a target="_blank" href="https://www.totoprayogo.com/#">New Web Design</a>
+                        <a href="#" class="float-right">21 March, 2020</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque diam non nisi semper, et elementum lorem ornare. Maecenas placerat facilisis mollis. Duis sagittis ligula in sodales vehicula....</p>
+                    </li>
+                    <li>
+                        <a href="#">21 000 Job Seekers</a>
+                        <a href="#" class="float-right">4 March, 2020</a>
+                        <p>Curabitur purus sem, malesuada eu luctus eget, suscipit sed turpis. Nam pellentesque felis vitae justo accumsan, sed semper nisi sollicitudin...</p>
+                    </li>
+                    <li>
+                        <a href="#">Awesome Employers</a>
+                        <a href="#" class="float-right">1 April, 2020</a>
+                        <p>Fusce ullamcorper ligula sit amet quam accumsan aliquet. Sed nulla odio, tincidunt vitae nunc vitae, mollis pharetra velit. Sed nec tempor nibh...</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- contact -->
+    <form>
+        <div class="container1">
+          <div class="card2">
+              <div class="top-div">
+                  <h2>Get in touch!</h2>
+                  <p>Contact us for a quote,help to join the team</p>
+              </div>
+              <div class="stats">
+                  <div class="stats1">
+                      <span><i class="fa fa-map-marker"></i></span>
+                      <span>102 Street 2714 Don</span>
+                  </div>
+                  <div class="stats1">
+                      <span><i class="fa fa-phone"></i></span>
+                      <span>+02 123 4567</span>
+                  </div>
+                  <div class="stats1">
+                      <span><i class="fa fa-envelope"></i></span>
+                      <span>hello@flowbase.com</span>
+                  </div>
+              </div>
+              <div class="card1">
+                  <div class="left">
+                      <div class="form-control">
+                          
+                          <input type="text" required="required">
+                          <span> Enter your full name</span>
+                          <i class="fa fa-users"></i>
+                      </div>
+                      <div class="form-control">
+                          
+                          <input type="text" required="required">
+                          <span>E-mail</span>
+                          <i class="fa fa-envelope"></i>
+                      </div>
+                      <div class="form-control">
+                          
+                          <input type="text" required="required">
+                          <span>Enter your contact no.</span>
+                          <i class="fa fa-mobile-phone"></i>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <div class="text-area">
+                         <textarea required="required"></textarea>
+                         <span>Message</span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="button">
+                  <button>Submit</button>
+              </div>
+              
+          </div>
+      </div>
+      </form>
+
+      <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+    <!-- Grid container -->
+    <div class="container p-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-linkedin-in"></i
+        ></a>
+  
+        <!-- Github -->
+        <a class=" btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+  
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <p class="pt-2">
+                <strong>Sign up for our newsletter</strong>
+              </p>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-md-5 col-12">
+              <!-- Email input -->
+              <div class="form-outline form-white mb-4">
+                <input type="email" id="form5Example21" class="form-control" />
+                <label class="form-label" for="form5Example21">Email address</label>
+              </div>
+            </div>
+            <!--Grid column-->
+  
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-outline-light mb-4">
+                Subscribe
+              </button>
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+  
+      <!-- Section: Text -->
+      <section class="mb-4">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
+          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
+          eum harum corrupti dicta, aliquam sequi voluptate quas.
+        </p>
+      </section>
+      <!-- Section: Text -->
+  
+      <!-- Section: Links -->
+      <section class="">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+  
+          <!--Grid column-->
+          <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Links</h5>
+  
+            <ul class="list-unstyled mb-0">
+              <li>
+                <a href="#!" class="text-white">Link 1</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 2</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 3</a>
+              </li>
+              <li>
+                <a href="#!" class="text-white">Link 4</a>
+              </li>
+            </ul>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>

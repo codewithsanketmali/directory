@@ -1,0 +1,639 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+  }
+  
+  form.example button:hover {
+    background: #0b7dda;
+  }
+  
+  /* Clear floats */
+  form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* Style buttons */
+.btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+  
+  /* Darker background on mouse-over */
+  .btn:hover {
+    background-color: RoyalBlue;
+  }
+
+  .nav-image{
+    background-image: url('./laptop-g21552a3a5_1280.jpg');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  @media screen and (min-width: 320px){
+    .nav-image{  
+    background-position: center;   
+    background-size: cover;  
+    }
+  }
+  .mid{
+    margin-top: 10rem;
+    color: rgb(249, 18, 53);
+    font-size: large;
+  }
+
+  :root{
+    font-size: 16px;
+    font-family: "Raleway";
+    --heading-color: hsl(0, 0%, 7%);
+    --date-text-color: hsl(0, 0%, 51%);
+    --previous-price-text-color: hsl(0, 98%, 44%);
+    --current-price-text-color: hsla(0, 0%, 0%, 0.822);
+    --liked-heart-icon-color: hsl(0, 98%, 44%);
+    --heart-icon-color: whitesmoke;
+    --pricing-font-weight: 800;
+    --title-font-weight: 800;
+    --date-font-weight: 550;
+
+    /* Cards colors */
+    --card-main-color : whitesmoke;
+    --card-1-secondary-color: rgb(192, 82, 82);
+    --card-2-secondary-color: rgb(67,53,27);
+    --card-3-secondary-color: rgb(178,180,179);
+    --card-4-secondary-color: rgb(96,109,117);
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    /* background-color: lightcyan; */  
+}
+
+.container input{
+    display: none;
+}
+
+.container{
+    max-width: 100em;
+    /* background-color: lightgreen; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    margin: auto;
+    min-height: 30em;
+    padding: 3em 1em 1em 1em;
+    box-sizing: border-box;
+}
+
+/* Card Styling */
+.card-div{
+    width: 20em;
+    min-height: 20em;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--card-main-color);
+    margin: 0.6em;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* ======== General styling of all cards and heart divs ========== */
+.img-div{
+    width: 100%;
+    height: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1rem;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+}
+
+.img-div img{
+    transform-origin: bottom;
+    transform: translateY(7.5%);
+    transition: transform 0.3s ease-in-out
+}
+
+/* === Styling the like Icon ==== */
+.like-icon-div{
+    padding: 1em 1em 0 1em;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    font-size: 1.5em;
+    color: var(--heart-icon-color);
+    border-radius:10px 10px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.like-icon-div-child{
+    /* background-color: yellow; */
+    width: 1em;
+    height: 1em;
+    position: relative;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.heart-empty{
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+.heart-fill{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.25s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+
+/* God of war image and heart-background*/
+.gow-img-div{
+    background-color: var(--card-1-secondary-color);
+}
+
+.gow-img-div img{
+    width: 65%;
+    transform: translateY(7.5%);
+    /* background-color: whitesmoke; */
+}
+
+.card-1 .like-icon-div{
+    background-color: var(--card-1-secondary-color);
+}
+
+
+/* Sekiro image and heart-background */
+.sekiro-img-div{
+    background-color: var(--card-2-secondary-color);
+}
+
+.sekiro-img-div img{
+    width: 100%;
+    transform: translateY(7.5%);
+}
+
+.card-2 .like-icon-div{
+    background-color: var(--card-2-secondary-color);
+}
+
+
+/* Dazai image and heart-background */
+.dazai-img-div{
+    background-color: var(--card-3-secondary-color);
+}
+
+.dazai-img-div img{
+    width: 80%;
+    transform: translateY(7.5%);
+}
+
+.card-3 .like-icon-div{
+    background-color: var(--card-3-secondary-color);
+    
+}
+
+/* U4 image and heart-background*/
+.u4-img-div{
+    background-color: var(--card-4-secondary-color);
+}
+
+.u4-img-div img{
+    width: 50%;
+    transform: translateY(7.5%);
+}
+
+.card-4 .like-icon-div{
+    background-color: var(--card-4-secondary-color);
+}
+
+/* ======== text Container Styling general ======== */
+
+.text-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: yellow; */
+    padding: 0 1.5em;
+    padding-top: 7em;
+    padding-bottom: 1em;
+    box-sizing: border-box;
+}
+
+.text-container .item-name,
+.text-container .date{
+    margin: 0.25em 0;
+    text-align: center;
+}
+
+.text-container .item-name{
+    font-size: 1.2em;
+    font-weight: var(--title-font-weight);
+    color: var(--heading-color);
+}
+
+.text-container .date{
+    font-size: 0.9em;
+    font-weight: var(--date-font-weight);
+    color: var(--date-text-color);
+}
+
+/* === Pricing and cart div  ===== */
+.pricing-and-cart{
+    /* background-color: wheat; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0.25em 0 1em 0;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.previous-price{
+    font-size: 0.8rem;
+    font-weight: var(--pricing-font-weight);
+    color: var(--previous-price-text-color);
+    text-decoration: line-through;
+    /* background-color: whitesmoke; */
+    text-align: left;
+}
+
+.current-price{
+    color: var(--current-price-text-color);
+    font-size: 1.3rem;
+    font-weight: var(--pricing-font-weight);
+    /* background-color: yellow; */
+    margin: 0;
+}
+
+.pricing-and-cart{
+    width: 100%;
+}
+
+.fa-shopping-cart{
+    font-size: 1.3rem;
+    top: 0;
+    transform: translateY(50%);
+}
+
+
+/* ====== Hover effects ======= */
+.card-div:hover .img-div img{
+    transform: translateY(7.5%) scale(1.2);
+}
+
+.card-div:hover{
+    transform: translate(0, -10px);
+}
+
+.like-icon-div-child:hover .heart-fill{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.like-icon-div-child:hover .heart-empty{
+    transition-delay: 0.25s;
+    opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-empty,
+#card-2-like:checked ~ .heart-empty,
+#card-3-like:checked ~ .heart-empty,
+#card-4-like:checked ~ .heart-empty{ 
+        opacity: 0;
+}
+
+#card-1-like:checked ~ .heart-fill,
+#card-2-like:checked ~ .heart-fill,
+#card-3-like:checked ~ .heart-fill,
+#card-4-like:checked ~ .heart-fill{
+    animation: like-animation 0.25s ease-in-out forwards;
+}
+
+#card-1-like:not(:checked) ~ .heart-fill,
+#card-2-like:not(:checked) ~ .heart-fill,
+#card-3-like:not(:checked) ~ .heart-fill,
+#card-4-like:not(:checked) ~ .heart-fill{
+    animation: unlike-animation 0.25s ease-in-out ;
+}
+
+
+@keyframes like-animation{
+    0%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    50%{
+        opacity: 1;
+        color: var(--liked-heart-icon-color);
+        transform: scale(0.5);
+    }
+
+    100%{
+        opacity: 1;
+        color: var(--liked-heart-icon-color);
+        transform: scale(1.0);
+    }
+}
+
+@keyframes unlike-animation{
+    0%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    
+    50%{
+        opacity: 1;
+        transform: scale(0.5);
+    }
+
+    100%{
+        opacity: 1;
+        color: var(--heart-icon-color);
+        transform: scale(1.0);
+    }
+}
+
+.btn:hover{
+  background-color: #0b7dda;
+  font-size: large;
+  font-style: oblique;
+  font-weight: 100;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 320px){
+  .btn-car{  
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem;
+
+  }
+}
+
+ul.timeline {
+  list-style-type: none;
+  position: relative;
+}
+ul.timeline:before {
+  content: ' ';
+  background: #d4d9df;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+ul.timeline > li:before {
+  content: ' ';
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #22c0e8;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+
+.container1{
+    min-height:100vh;
+    background-color:#1b7cd7bc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+   
+}
+
+.card2{
+    background-color:#fff2e0;
+     z-index:10;
+    font-family: 'Poppins', sans-serif;
+    padding:20px;
+    border-radius:20px;
+    
+}
+.top-div{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.top-div h2{
+    font-weight:900;
+   
+}
+.top-div p{
+    font-size:12px;
+    font-weight:900;
+    color:#8d8dab;
+     font-family: 'Poppins', sans-serif;
+}
+.stats{
+    display:flex;
+    margin:20px;
+    justify-content:space-between;
+}
+.stats1{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    cursor:pointer;
+    transition:all 0.5s;
+    padding:10px;
+}
+.stats1 span:nth-child(1){
+    color:#5f30e294;
+    font-size:18px;
+}
+.stats1 span:nth-child(2){
+    font-weight:800;
+    font-size:11px;
+  
+}
+
+.stats1:hover{
+    background-color:white;
+}
+.card1{
+    margin-top:40px;
+    position:relative;
+    background-color:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    display:flex;
+    gap:20px;
+    padding:10px;
+    height:100%;
+    gap:20px
+}
+
+.card1 .left{
+  
+}
+.card1 .form-control{
+    width:100%;
+    position:relative;
+}
+
+.card1 .form-control input[type="text"]{
+ width:100%;   
+ height:30px;
+ box-sizing:border-box;
+ border:none;
+ outline:none;
+  margin-top:25px;
+  padding:0 24px;
+  box-sizing:border-box;
+  background-color:#f9f9fb;
+ 
+}
+.card1 .form-control span{
+    position:absolute;
+   top:32px;
+   font-size:12px;
+    left:24px;
+}
+.card1 .form-control i{
+    position:absolute;
+    top:33px;
+    left:3px;
+    font-size:14px;
+}
+.card1 .form-control .fa-mobile-phone{
+    position:absolute;
+    top:30px;
+    left:3px;
+    font-size:22px;
+}
+.form-control input:focus~span,.form-control input:valid~span{
+    top:6px;
+    font-size:12px;
+    font-weight:800;
+}
+.text-area{
+    position:relative;
+    
+}
+.card1 .right{
+
+    margin-top:24px;
+    box-sizing:border-box;
+}
+.card1 .right textarea{
+    height:140px;
+    resize:none;
+    width:100%;
+    border:none;
+    outline:none;
+    background-color:#f9f9fb;
+    padding-top:7px;
+     padding-left:10px;
+     box-sizing:border-box;
+}
+.card1 .right .text-area span{
+    position:absolute;
+    top:7px;
+    left:10px;
+    font-size:12px;
+}
+.text-area textarea:focus~span,.text-area textarea:valid~span{
+    top:-20px !important;
+    font-size:12px;
+    font-weight:800;
+}
+.button{
+    display:flex;
+    justify-content:center;
+    position:relative;
+}
+
+.button button{
+    height:30px;
+    width:200px;
+    border:none;
+    background-color:#5f30e2;
+    color:#fff;
+    font-size:12px;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:400px){
+    .card1{
+        display:block;
+    }
+}
